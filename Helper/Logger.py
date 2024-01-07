@@ -4,5 +4,5 @@ class Logger:
         if calculation_time == -1:
             print("Question {} answer: {}".format(question_num, answer, 5))
             return
-        print("Question {} was calculated in {} seconds. Answer: {}".format(question_num, round(calculation_time, 5),
-                                                                            answer))
+        print("Question {} was calculated in {} seconds.\tAnswer: {}".format(question_num, round(calculation_time, 5),
+                                                                             answer))

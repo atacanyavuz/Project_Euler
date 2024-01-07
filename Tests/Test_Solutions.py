@@ -18,7 +18,7 @@ def test_answers():
         else:
             print("[-]", end="\t")
         Logger.print_log(question_num, result, time)
-    print("{} out of {} questions are correct.". format(number_of_true_answers, len(solve_functions)))
+    print("{} out of {} questions are correct.".format(number_of_true_answers, len(solve_functions)))
 
 
 def find_solve_function(file_path):
@@ -29,8 +29,6 @@ def find_solve_function(file_path):
         spec.loader.exec_module(module)
         if hasattr(module, 'solve') and callable(module.solve) and hasattr(module, "QUESTION_NUM"):
             solve_functions[module.QUESTION_NUM] = module.solve
-        else:
-            print(f"{file_path}: 'solve' function and QUESTION_NUM not found.")
     except Exception as e:
         print(f"{file_path}: Error - {str(e)}")
 
