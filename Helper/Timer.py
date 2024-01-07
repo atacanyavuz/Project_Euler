@@ -17,3 +17,10 @@ class Timer:
             raise TimerNotStarted("Timer has not been started yet.")
 
         return time.time() - self.start_time
+
+    def get_reset_calculation_time(self):
+        if self.start_time == 0:
+            raise TimerNotStarted("Timer has not been started yet.")
+        calculation_time = time.time() - self.start_time
+        self.start_time = 0
+        return calculation_time
