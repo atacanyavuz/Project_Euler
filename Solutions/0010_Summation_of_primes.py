@@ -11,13 +11,6 @@ from Solutions.Helper import Euler_Helper as EH
 QUESTION_NUM = 10
 
 
-def prime(x):
-    for i in range(2, int(x ** (1 / 2)) + 1):
-        if not x % i:
-            return False
-    return True
-
-
 def solve():
     timer = Timer()
     timer.set_start_time()
